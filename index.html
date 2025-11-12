@@ -62,11 +62,16 @@
         transform-origin: left center;
         box-shadow: inset 10px 0 25px rgba(0,0,0,0.5);
       }
+
+      /* CSS para los botones naranja corporativo (agregado) */
+      .b-next:hover, .b-prev:hover {
+        background-color: rgba(255, 140, 0, 0.4) !important; /* Naranja oscuro semitransparente */
+      }
     </style>
     </head>
 <body>
 
-    <h1> Revista Interactiva.</h1>
+    <h1>Revista Interactiva.</h1>
 
     <div id="revista">
         <div class="pagina" id="p01"><h2>Portada</h2><p>Contenido principal.</p></div>
@@ -75,12 +80,11 @@
         
         <div class="pagina" id="p03"><h2>Página 2</h2><p>Contenido final.</p></div>
 
+    </div> <script src="js/jquery-3.7.1.min.js"></script> 
+<script src="js/jquery.easing.1.3.js"></script> <script src="js/jquery.booklet.min.js"></script> 
+<script src="js/howler.min.js"></script>
+<script src="js/script.js"></script>  
     
-    <script src="js/jquery-3.7.1.min.js"></script> 
-    <script src="js/jquery.easing.1.3.js"></script> 
-    <script src="js/jquery.booklet.min.js"></script>
-    <script src="js/howler.min.js"></script>
-    <script src="js/script.js"></script>  
     <style>
 /* Estilos para el botón de WhatsApp flotante */
 .whatsapp-float {
@@ -94,7 +98,7 @@
     border-radius: 50px;
     text-align: center;
     font-size: 30px;
-    z-index: 100; /* Asegura que esté sobre la revista */
+    z-index: 100; 
     box-shadow: 2px 2px 3px #999;
     display: flex;
     align-items: center;
@@ -107,8 +111,5 @@
     W
 </a>
         
-</body>
+</body> 
 </html>
-
-
-
