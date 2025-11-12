@@ -28,7 +28,7 @@
 
       #revista {
         position: relative;
-        width: 900px;
+        width: 1000px; /* Tamaño ajustado al script */
         height: 600px;
         margin-top: 40px;
         perspective: 2000px;
@@ -49,14 +49,14 @@
         backface-visibility: hidden;
       }
 
-      /* PÃ¡gina izquierda */
+      /* Página izquierda */
       .pagina:nth-child(odd) {
         left: 0;
         transform-origin: right center;
         box-shadow: inset -10px 0 25px rgba(0,0,0,0.5); 
       }
 
-      /* PÃ¡gina derecha */
+      /* Página derecha */
       .pagina:nth-child(even) {
         left: 50%;
         transform-origin: left center;
@@ -66,12 +66,15 @@
     </head>
 <body>
 
-    <h1>ðŸ“– Revista Interactiva</h1>
+    <h1> Revista Interactiva</h1>
 
     <div id="revista">
-        <div class="pagina" id="p01"><h2>Portada</h2><p>Contenido restaurado aquÃ­.</p></div>
-        <div class="pagina" id="p02"><h2>PÃ¡gina 1</h2><p>Contenido restaurado aquÃ­.</p></div>
-        </div>
+        <div class="pagina" id="p01"><h2>Portada</h2><p>Contenido principal.</p></div>
+        
+        <div class="pagina" id="p02"><h2>Página 1</h2><p>Más contenido.</p></div>
+        
+        <div class="pagina" id="p03"><h2>Página 2</h2><p>Contenido final.</p></div>
+
     
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery.booklet.min.js"></script> 
