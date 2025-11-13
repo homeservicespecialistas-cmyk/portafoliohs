@@ -1,45 +1,21 @@
 $(function() {
-  var $book = $('#flipbook-container');
+  var $bookBlock = $('#bb-bookblock');
+  var $navNext = $('#bb-nav-next');
+  var $navPrev = $('#bb-nav-prev');
 
-  // Inicializa el flipbook
-  $book.bookblock({
+  $bookBlock.bookblock({
     speed: 800,
     shadowSides: 0.8,
-    shadowFlip: 0.6
+    shadowFlip: 0.4
   });
 
-  // Sonido al pasar página
-  var pageSound = new Audio('sounds/pasar-pagina.mp3');
-
-  function playSound() {
-    pageSound.currentTime = 0;
-    pageSound.play().catch(() => {});
-  }
-
-  // Navegación
-  $('#bb-prev').on('click', function() {
-    $book.bookblock('prev');
-    playSound();
+  $navNext.on('click', function() {
+    $bookBlock.bookblock('next');
     return false;
   });
 
-  $('#bb-next').on('click', function() {
-    $book.bookblock('next');
-    playSound();
+  $navPrev.on('click', function() {
+    $bookBlock.bookblock('prev');
     return false;
-  });
-
-  // Swipe en dispositivos táctiles
-  $book.children().on({
-    swipeleft: function() {
-      $book.bookblock('next');
-      playSound();
-      return false;
-    },
-    swiperight: function() {
-      $book.bookblock('prev');
-      playSound();
-      return false;
-    }
   });
 });
