@@ -6,10 +6,7 @@
   <title>Revista Interactiva 📖</title>
 
   <!-- Swiper CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Tu hoja de estilos -->
   <link rel="stylesheet" href="css/style.css" />
@@ -59,35 +56,22 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Script de configuración -->
+  <!-- Script personalizado -->
   <script>
-    <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  const swiper = new Swiper('.swiper', {
+    effect: 'flip', // efecto tipo libro
+    speed: 1200,    // velocidad de giro
+    allowTouchMove: true,
+    grabCursor: true,
+    slidesPerView: 1,
+    flipEffect: {
+      slideShadows: true, // sombras activas
+    },
+  });
 
-<!-- Script de control -->
-<script>
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  speed: 300,
-  effect: 'flip', // también puedes probar 'slide', 'fade' o 'cube'
-  slidesPerView: 1,
-  allowTouchMove: true,
-});
-
-document.getElementById('next').addEventListener('click', () => swiper.slideNext());
-document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
-</script>
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      speed: 600,
-      allowTouchMove: true,
-      effect: 'slide',
-      slidesPerView: 1,
-    });
-
-    document.getElementById('next').addEventListener('click', () => swiper.slideNext());
-    document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
+  document.getElementById('next').addEventListener('click', () => swiper.slideNext());
+  document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
   </script>
+
 </body>
 </html>
-
