@@ -15,10 +15,33 @@
 
   <!-- CONTENEDOR DEL LIBRO -->
   <div id="bb-bookblock" class="bb-bookblock">
-    <div class="bb-item"><div class="content"><h2>Bienvenido a mi Portafolio</h2><p>Servicios de mantenimiento profesional.</p></div></div>
-    <div class="bb-item"><div class="content"><h2>Electricidad ⚡</h2><p>Instalaciones, reparación y mantenimiento.</p></div></div>
-    <div class="bb-item"><div class="content"><h2>Plomería 🚰</h2><p>Detección de fugas, cambio de grifería, y más.</p></div></div>
-    <div class="bb-item"><div class="content"><h2>Pintura 🎨</h2><p>Interior y exterior, acabados profesionales.</p></div></div>
+    <div class="bb-item">
+      <div class="content">
+        <h2>Bienvenido a mi Portafolio</h2>
+        <p>Servicios de mantenimiento profesional a tu alcance.</p>
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="content">
+        <h2>Electricidad ⚡</h2>
+        <p>Instalaciones, reparación y mantenimiento eléctrico residencial e industrial.</p>
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="content">
+        <h2>Plomería 🚰</h2>
+        <p>Detección de fugas, cambio de grifería, desagües y mantenimiento de redes hidráulicas.</p>
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="content">
+        <h2>Pintura 🎨</h2>
+        <p>Trabajos interiores y exteriores, con acabados profesionales y duraderos.</p>
+      </div>
+    </div>
   </div>
 
   <!-- BOTONES -->
@@ -28,7 +51,7 @@
   </nav>
 
   <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a href="https://wa.me/573001112233" target="_blank" class="whatsapp-btn" title="Contáctame por WhatsApp">
+  <a href="https://wa.me/573057505025" target="_blank" class="whatsapp-btn" title="Contáctame por WhatsApp">
     💬
   </a>
 
@@ -66,9 +89,8 @@
           });
 
           $(document).keydown(function(e) {
-            var key = e.which;
-            if (key === 37) config.$bookBlock.bookblock('prev');
-            if (key === 39) config.$bookBlock.bookblock('next');
+            if (e.which === 37) config.$bookBlock.bookblock('prev');
+            if (e.which === 39) config.$bookBlock.bookblock('next');
           });
         };
 
