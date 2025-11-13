@@ -57,3 +57,32 @@ nav button {
 nav button:hover {
   background: #0056b3;
 }
+/* ---- MODO PÁGINA COMPLETA ---- */
+.bb-bookblock {
+  width: 100%;
+  height: 100vh; /* ocupa toda la altura de la pantalla */
+  overflow: hidden;
+}
+
+.bb-item {
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bb-item .content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  overflow: hidden;
+}
