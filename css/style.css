@@ -1,9 +1,7 @@
-
-/* --- Estilos base para el portafolio tipo libro --- */
-
+/* ==== ESTILO GENERAL ==== */
 body {
-  background: #eaeaea;
-  font-family: 'Poppins', sans-serif;
+  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,55 +10,49 @@ body {
   margin: 0;
 }
 
-/* Contenedor del libro */
-.bb-custom-wrapper {
-  position: relative;
-  width: 90vw;
-  max-width: 1000px;
-  height: 80vh;
-  margin: auto;
-}
-
-/* Cada página */
-.bb-item {
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+/* ==== LIBRO ==== */
+.bb-bookblock {
+  width: 90vw;     /* ancho del libro */
+  max-width: 800px;
+  height: 95vh;    /* alto del libro */
+  max-height: 600px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
   border-radius: 10px;
   overflow: hidden;
 }
 
-/* Contenido de las páginas */
-.bb-item .bb-custom-side {
-  padding: 40px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Títulos */
-h1, h2 {
+/* ==== CONTENIDO DE CADA PÁGINA ==== */
+.bb-item .content {
+  background: white;
   color: #333;
   text-align: center;
+  padding: 60px 30px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
-/* Botones */
+/* ==== BOTONES ==== */
 nav {
-  text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-nav a, nav button {
-  background-color: #222;
-  color: #fff;
+nav button {
+  background: #007bff;
+  color: white;
   border: none;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s;
 }
 
-nav a:hover, nav button:hover {
-  background-color: #555;
+nav button:hover {
+  background: #0056b3;
 }
