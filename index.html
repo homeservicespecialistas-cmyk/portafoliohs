@@ -1,38 +1,76 @@
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <!-- Cada página del libro -->
-    <div class="swiper-slide">
-      <div class="content">
-        <h2>Bienvenido a mi Portafolio</h2>
-        <p>Servicios de mantenimiento.</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revista Interactiva 📖</title>
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Tu hoja de estilos -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Cada página -->
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Bienvenido a mi Portafolio</h2>
+          <p>Servicios de mantenimiento.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Electricidad ⚡</h2>
+          <p>Instalaciones, reparación y mantenimiento.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Plomería 🚰</h2>
+          <p>Detección de fugas, cambio de grifería, y más.</p>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="content">
+          <h2>Pintura 🎨</h2>
+          <p>Interior y exterior, acabados profesionales.</p>
+        </div>
       </div>
     </div>
 
-    <div class="swiper-slide">
-      <div class="content">
-        <h2>Electricidad ⚡</h2>
-        <p>Instalaciones, reparación y mantenimiento.</p>
-      </div>
-    </div>
-
-    <div class="swiper-slide">
-      <div class="content">
-        <h2>Plomería 🚰</h2>
-        <p>Detección de fugas, cambio de grifería, y más.</p>
-      </div>
-    </div>
-
-    <div class="swiper-slide">
-      <div class="content">
-        <h2>Pintura 🎨</h2>
-        <p>Interior y exterior, acabados profesionales.</p>
-      </div>
+    <!-- Botones -->
+    <div class="buttons">
+      <button id="prev">◀️ Anterior</button>
+      <button id="next">Siguiente ▶️</button>
     </div>
   </div>
 
-  <!-- Botones de navegación -->
-  <div class="buttons">
-    <button id="prev">◀️ Anterior</button>
-    <button id="next">Siguiente ▶️</button>
-  </div>
-</div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script de configuración -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      speed: 600,
+      allowTouchMove: true,
+      effect: 'slide',
+      slidesPerView: 1,
+    });
+
+    document.getElementById('next').addEventListener('click', () => swiper.slideNext());
+    document.getElementById('prev').addEventListener('click', () => swiper.slidePrev());
+  </script>
+</body>
+</html>
