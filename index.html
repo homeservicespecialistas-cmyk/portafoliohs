@@ -1,173 +1,129 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js demo-4">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>BookBlock: A Content Flip Plugin - Demo 4</title>
-		<meta name="description" content="Bookblock: A Content Flip Plugin - Demo 4" />
-		<meta name="keywords" content="javascript, jquery, plugin, css3, flip, page, 3d, booklet, book, perspective" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico"> 
-		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
-		<!-- custom demo style -->
-		<link rel="stylesheet" type="text/css" href="css/demo4.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="bb-custom-wrapper">
-				
-				<div id="bb-bookblock" class="bb-bookblock">
-					<div class="bb-item">
-						<div class="bb-custom-firstpage">
-							<h1>BookBlock <span>A Content Flip Plugin</span></h1>	
-							<nav class="codrops-demos">
-								<a href="index.html">Demo 1</a>
-								<a href="index2.html">Demo 2</a>
-								<a href="index3.html">Demo 3</a>
-								<a class="current-demo" href="index4.html">Demo 4</a>
-								<a href="index5.html">Demo 5</a>
-							</nav>
-							<nav class="codrops-nav">
-								<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/codrops/2012/08/29/multiple-area-charts-with-d3-js/"><span>Previous Demo</span></a>
-								<a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/2012/09/03/bookblock-a-content-flip-plugin/"><span>Back to the Codrops Article</span></a>
-							</nav>
-						</div>
-						<div class="bb-custom-side">
-							<p>Pastry bear claw oat cake danish croissant jujubes danish. Wypas soufflé muffin. Liquorice powder pastry danish. Candy toffee gummi bears chocolate bar lollipop applicake chocolate cake danish brownie.</p>
-						</div>
-					</div>
-					<div class="bb-item">
-						<div class="bb-custom-side">
-							<p>Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
-						</div>
-						<div class="bb-custom-side">
-							<p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake candy canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o marzipan jelly-o.</p>
-						</div>
-					</div>
-					<div class="bb-item">
-						<div class="bb-custom-side">
-							<p>Croissant pudding gingerbread gummi bears marshmallow halvah. Wafer donut croissant. Cookie muffin jelly beans pie croissant croissant candy canes jelly marshmallow.</p>
-						</div>
-						<div class="bb-custom-side">
-							<p>Wafer donut caramels chocolate caramels sweet roll. Gummi bears powder candy chocolate cake gummi bears icing wafer cupcake. Brownie cotton candy pastry chocolate wypas.</p>
-						</div>
-					</div>
-					<div class="bb-item">
-						<div class="bb-custom-side">
-							<p>Marzipan dragée candy canes chocolate cake. Soufflé faworki jelly gingerbread cupcake. Powder gummies applicake.</p>
-						</div>
-						<div class="bb-custom-side">
-							<p>Cotton candy caramels tootsie roll soufflé powder lemon drops carrot cake danish. Cotton candy candy canes fruitcake muffin gingerbread. Jujubes soufflé gingerbread donut donut.</p>
-						</div>
-					</div>
-					<div class="bb-item">
-						<div class="bb-custom-side">
-							<p>Jujubes fruitcake tiramisu liquorice chocolate cake. Carrot cake faworki donut soufflé oat cake tootsie roll. Fruitcake fruitcake cake sweet pie jelly beans. Chocolate cake candy jujubes oat cake toffee croissant muffin.</p>
-						</div>
-						<div class="bb-custom-side">
-							<p>Chocolate bar tiramisu marzipan. Croissant soufflé croissant lollipop liquorice dragée chupa chups carrot cake. Liquorice lollipop halvah toffee lollipop.</p>
-						</div>
-					</div>
-				</div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Servicios - Jhon Pérez</title>
 
-				<nav>
-					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
-					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-					<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
-				</nav>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/jquery.bookblock.css">
+  <style>
+    body {
+      background: #f5f5f5;
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      text-align: center;
+    }
 
-			</div>
+    h1 {
+      margin-top: 30px;
+      color: #333;
+      font-weight: 600;
+    }
 
-		</div><!-- /container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="js/jquerypp.custom.js"></script>
-		<script src="js/jquery.bookblock.js"></script>
-		<script>
-			var Page = (function() {
-				
-				var config = {
-						$bookBlock : $( '#bb-bookblock' ),
-						$navNext : $( '#bb-nav-next' ),
-						$navPrev : $( '#bb-nav-prev' ),
-						$navFirst : $( '#bb-nav-first' ),
-						$navLast : $( '#bb-nav-last' )
-					},
-					init = function() {
-						config.$bookBlock.bookblock( {
-							speed : 1000,
-							shadowSides : 0.8,
-							shadowFlip : 0.4
-						} );
-						initEvents();
-					},
-					initEvents = function() {
-						
-						var $slides = config.$bookBlock.children();
+    #flipbook-container {
+      width: 90%;
+      max-width: 1000px;
+      height: 600px;
+      margin: 40px auto;
+      position: relative;
+    }
 
-						// add navigation events
-						config.$navNext.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'next' );
-							return false;
-						} );
+    .bb-bookblock {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 
-						config.$navPrev.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'prev' );
-							return false;
-						} );
+    .bb-item {
+      background: #fff;
+      padding: 40px;
+      text-align: left;
+    }
 
-						config.$navFirst.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'first' );
-							return false;
-						} );
+    .page-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #222;
+    }
 
-						config.$navLast.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'last' );
-							return false;
-						} );
-						
-						// add swipe events
-						$slides.on( {
-							'swipeleft' : function( event ) {
-								config.$bookBlock.bookblock( 'next' );
-								return false;
-							},
-							'swiperight' : function( event ) {
-								config.$bookBlock.bookblock( 'prev' );
-								return false;
-							}
-						} );
+    .page-content {
+      font-size: 1em;
+      line-height: 1.6em;
+      color: #444;
+    }
 
-						// add keyboard events
-						$( document ).keydown( function(e) {
-							var keyCode = e.keyCode || e.which,
-								arrow = {
-									left : 37,
-									up : 38,
-									right : 39,
-									down : 40
-								};
+    .nav-buttons {
+      margin-top: 20px;
+    }
 
-							switch (keyCode) {
-								case arrow.left:
-									config.$bookBlock.bookblock( 'prev' );
-									break;
-								case arrow.right:
-									config.$bookBlock.bookblock( 'next' );
-									break;
-							}
-						} );
-					};
+    .nav-buttons button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
 
-					return { init : init };
+    .nav-buttons button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
 
-			})();
-		</script>
-		<script>
-				Page.init();
-		</script>
-	</body>
+<body>
+  <h1>📘 Portafolio de Servicios</h1>
+
+  <div id="flipbook-container" class="bb-bookblock">
+    <div class="bb-item">
+      <div class="page-title">Bienvenido</div>
+      <div class="page-content">
+        Este portafolio presenta los servicios de mantenimiento ofrecidos por <strong>Jhon Pérez</strong>.  
+        ¡Explora las páginas para conocer más sobre mi trabajo!
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="page-title">Servicios Generales</div>
+      <div class="page-content">
+        - Mantenimiento eléctrico<br>
+        - Plomería y sanitarios<br>
+        - Pintura interior y exterior<br>
+        - Reparaciones en hogar y oficina
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="page-title">Proyectos Destacados</div>
+      <div class="page-content">
+        Ejecución de obras residenciales y comerciales con enfoque en calidad y seguridad.  
+        Cada proyecto refleja compromiso, puntualidad y atención al detalle.
+      </div>
+    </div>
+
+    <div class="bb-item">
+      <div class="page-title">Contacto</div>
+      <div class="page-content">
+        📞 Tel: +57 300 000 0000<br>
+        ✉️ Correo: jhonperez@example.com<br>
+        📍 Bogotá, Colombia
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button id="bb-prev">⬅️ Anterior</button>
+    <button id="bb-next">➡️ Siguiente</button>
+  </div>
+
+  <!-- Librerías -->
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquerypp.custom.js"></script>
+  <script src="js/jquery.bookblock.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
