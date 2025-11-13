@@ -1,3 +1,5 @@
+jQuery(document).ready(function($) {
+
   $("#revista").booklet({
     width: 1000,
     height: 600,
@@ -13,3 +15,6 @@
     zoom: false,
     autoplay: false
   });
+
+});
+
