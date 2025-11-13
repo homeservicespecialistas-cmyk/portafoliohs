@@ -3,103 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Interactivo 📖</title>
+  <title>Portafolio v3 b3- Efecto Libro 📖</title>
 
-  <!-- BookBlock CSS -->
   <link rel="stylesheet" href="css/bookblock.css">
   <link rel="stylesheet" href="css/style.css">
-
-  <script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 
-  <!-- CONTENEDOR DEL LIBRO -->
-  <div id="bb-bookblock" class="bb-bookblock">
+  <div id="book" class="bookblock">
     <div class="bb-item">
       <div class="content">
         <h2>Bienvenido a mi Portafolio</h2>
-        <p>Servicios de mantenimiento profesional a tu alcance.</p>
+        <p>Servicios de mantenimiento.</p>
       </div>
     </div>
-
     <div class="bb-item">
       <div class="content">
         <h2>Electricidad ⚡</h2>
-        <p>Instalaciones, reparación y mantenimiento eléctrico residencial e industrial.</p>
+        <p>Instalaciones, reparación y mantenimiento.</p>
       </div>
     </div>
-
     <div class="bb-item">
       <div class="content">
         <h2>Plomería 🚰</h2>
-        <p>Detección de fugas, cambio de grifería, desagües y mantenimiento de redes hidráulicas.</p>
+        <p>Detección de fugas, cambio de grifería, y más.</p>
       </div>
     </div>
-
     <div class="bb-item">
       <div class="content">
         <h2>Pintura 🎨</h2>
-        <p>Trabajos interiores y exteriores, con acabados profesionales y duraderos.</p>
+        <p>Interior y exterior, acabados profesionales.</p>
       </div>
     </div>
   </div>
 
-  <!-- BOTONES -->
-  <nav class="nav-buttons">
-    <button id="bb-nav-prev">◀️ Anterior</button>
-    <button id="bb-nav-next">Siguiente ▶️</button>
-  </nav>
+  <div class="buttons">
+    <button id="prev">◀️ Anterior</button>
+    <button id="next">Siguiente ▶️</button>
+  </div>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a href="https://wa.me/573057505025" target="_blank" class="whatsapp-btn" title="Contáctame por WhatsApp">
-    💬
-  </a>
+  <a href="https://wa.me/573057505025" class="whatsapp" target="_blank">💬 WhatsApp</a>
 
-  <!-- JS -->
-  <script src="js/jquery-1.8.3.min.js"></script>
-  <script src="js/jquerypp.custom.js"></script>
+  <script src="js/jquery.min.js"></script>
   <script src="js/jquery.bookblock.js"></script>
-
-  <script>
-    $(function() {
-      var Page = (function() {
-        var config = {
-          $bookBlock: $('#bb-bookblock'),
-          $navNext: $('#bb-nav-next'),
-          $navPrev: $('#bb-nav-prev')
-        };
-
-        var init = function() {
-          config.$bookBlock.bookblock({
-            speed: 1000,
-            shadowSides: 0.8,
-            shadowFlip: 0.7
-          });
-          initEvents();
-        };
-
-        var initEvents = function() {
-          config.$navNext.on('click touchstart', function() {
-            config.$bookBlock.bookblock('next');
-            return false;
-          });
-          config.$navPrev.on('click touchstart', function() {
-            config.$bookBlock.bookblock('prev');
-            return false;
-          });
-
-          $(document).keydown(function(e) {
-            if (e.which === 37) config.$bookBlock.bookblock('prev');
-            if (e.which === 39) config.$bookBlock.bookblock('next');
-          });
-        };
-
-        return { init: init };
-      })();
-
-      Page.init();
-    });
-  </script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
