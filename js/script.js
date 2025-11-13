@@ -1,13 +1,13 @@
 jQuery(document).ready(function($) {
 
-  // Inicializar sonido
+  // Inicializar sonido al pasar página
   const sonidoPagina = new Howl({
     src: ['sounds/pasar-pagina.mp3'],
     volume: 0.7
   });
 
-  // Inicializar el libro
-  const revista = $("#revista").booklet({
+  // Inicializar la revista con las opciones correctas
+  $("#revista").booklet({
     width: 1000,
     height: 600,
     speed: 800,
@@ -22,13 +22,12 @@ jQuery(document).ready(function($) {
     zoom: false,
     autoplay: false,
 
-    // 🔊 Reproducir sonido cada vez que se pasa una página
-    next: function() {
-      sonidoPagina.play();
-    },
-    prev: function() {
-      sonidoPagina.play();
-    }
+    // Corrige orden de las páginas (de izquierda a derecha)
+    direction: "LTR", // Left to Right
+
+    // Reproduce sonido al pasar
+    next: function() { sonidoPagina.play(); },
+    prev: function() { sonidoPagina.play(); }
   });
 
 });
