@@ -1,48 +1,47 @@
 $(function() {
-  // Inicializa el flipbook
-  var $bookBlock = $('#bb-bookblock');
-  $bookBlock.bookblock({
-    speed: 800,
-    shadowSides: 0.8,
-    shadowFlip: 0.7
-  });
 
-  // Referencias a los botones
-  var $navNext = $('#bb-nav-next');
-  var $navPrev = $('#bb-nav-prev');
+  var Page = (function() {
 
-  // Funciones para moverse entre páginas
-  function nextPage() {
-    $bookBlock.bookblock('next');
-  }
+    var config = {
+      $bookBlock: $('#bb-bookblock'),
+      $navNext: $('#bb-nav-next'),
+      $navPrev: $('#bb-nav-prev')
+    };
 
-  function prevPage() {
-    $bookBlock.bookblock('prev');
-  }
+    var init = function() {
+      config.$bookBlock.bookblock({
+        speed: 800,
+        shadowSides: 0.8,
+        shadowFlip: 0.4
+      });
+      initEvents();
+    };
 
-  // Eventos de botones
-  $navNext.off('click').on('click', function(e) {
-    e.preventDefault();
-    nextPage();
-  });
+    var initEvents = function() {
+      var $slides = config.$bookBlock.children();
 
-  $navPrev.off('click').on('click', function(e) {
-    e.preventDefault();
-    prevPage();
-  });
+      // Navegación con botones
+      config.$navNext.on('click touchstart', function() {
+        config.$bookBlock.bookblock('next');
+        return false;
+      });
 
-  // Soporte con teclado
-  $(document).keydown(function(e) {
-    var keyCode = e.keyCode || e.which,
-        arrow = { left: 37, right: 39 };
+      config.$navPrev.on('click touchstart', function() {
+        config.$bookBlock.bookblock('prev');
+        return false;
+      });
 
-    switch (keyCode) {
-      case arrow.left:
-        prevPage();
-        break;
-      case arrow.right:
-        nextPage();
-        break;
-    }
-  });
+      // Navegación con teclado
+      $(document).keydown(function(e) {
+        var key = e.which;
+        if (key === 37) config.$bookBlock.bookblock('prev');
+        if (key === 39) config.$bookBlock.bookblock('next');
+      });
+    };
+
+    return { init: init };
+
+  })();
+
+  Page.init();
 });
